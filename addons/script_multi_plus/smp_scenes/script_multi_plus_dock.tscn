@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://qhoglio2h01n"]
+
+[ext_resource type="Script" uid="uid://lcf51d3n44ey" path="res://addons/script_multi_plus/smp_scripts/smp_dock/smp_dock_main/smp_dock_main.gd" id="1_aj246"]
+[ext_resource type="Script" uid="uid://d1ns42anrat7h" path="res://addons/script_multi_plus/smp_scripts/smp_managers/smp_debug_manager.gd" id="2_h2kdt"]
+[ext_resource type="PackedScene" uid="uid://cttetg1gqs7kc" path="res://addons/script_multi_plus/smp_scenes/smp_finder_panel_scenes/script_find_popup_panel.tscn" id="3_njqr2"]
+[ext_resource type="PackedScene" uid="uid://c7qxw7acijfwv" path="res://addons/script_multi_plus/smp_scenes/smp_dock_container.tscn" id="3_r1jvh"]
+
+[node name="ScriptMultiPlusDock" type="MarginContainer" node_paths=PackedStringArray("_debug_manager")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+script = ExtResource("1_aj246")
+_debug_manager = NodePath("DebugManager")
+
+[node name="DebugManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_h2kdt")
+_debug_signal = true
+_err_open_log = true
+
+[node name="ScriptFindPopupPanel" parent="." instance=ExtResource("3_njqr2")]
+unique_name_in_owner = true
+visible = false
+
+[node name="DockSplit" type="SplitContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/minimum_grab_thickness = 8
+split_offset = 499
+drag_area_margin_begin = 26
+drag_area_margin_end = 12
+drag_area_offset = 3
+
+[node name="MContainer1" parent="DockSplit" instance=ExtResource("3_r1jvh")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 1
+container_index = 1
+
+[node name="DockSplit2" type="SplitContainer" parent="DockSplit"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/minimum_grab_thickness = 8
+drag_area_margin_begin = 26
+drag_area_margin_end = 12
+drag_area_offset = 2
+
+[node name="MContainer2" parent="DockSplit/DockSplit2" instance=ExtResource("3_r1jvh")]
+unique_name_in_owner = true
+layout_mode = 2
+container_index = 2
+
+[node name="MContainer3" parent="DockSplit/DockSplit2" instance=ExtResource("3_r1jvh")]
+unique_name_in_owner = true
+layout_mode = 2
+container_index = 3

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccvqfh3dgi8m1"]
+
+[ext_resource type="Script" uid="uid://b3ru5igs1ike" path="res://addons/script_multi_plus/smp_scripts/smp_finder_panel_scripts/smp_button_open.gd" id="1_pyqua"]
+
+[node name="DefaultButtonOpen" type="Button"]
+custom_minimum_size = Vector2(150, 0)
+text = "Button"
+script = ExtResource("1_pyqua")

@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnsfdw4h6tok0"]
+
+[ext_resource type="Texture2D" uid="uid://clb3mfx5wnn25" path="res://addons/script_multi_plus/sme_images/godot_Script.svg" id="1_oi5ym"]
+[ext_resource type="Script" uid="uid://3ce7rnk3rqsd" path="res://addons/script_multi_plus/smp_scripts/smp_finder_panel_scripts/smp_label_script_size.gd" id="1_rq3oe"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rq3oe"]
+bg_color = Color(0.6, 0.6, 0.6, 0.05)
+border_width_left = 2
+border_color = Color(0.8, 0.8, 0.8, 0.3)
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+expand_margin_left = 8.0
+expand_margin_right = 4.0
+
+[node name="LabelScriptSize" type="MarginContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 4
+script = ExtResource("1_rq3oe")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rq3oe")
+
+[node name="H" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="IconTextureSize" type="TextureRect" parent="H"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("1_oi5ym")
+stretch_mode = 5
+
+[node name="LabelScriptSize" type="Label" parent="H"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "9999"
+horizontal_alignment = 2

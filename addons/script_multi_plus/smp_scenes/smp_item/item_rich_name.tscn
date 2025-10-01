@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://btoyad3ly4ekp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_csd6r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o32e2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mm4g4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c0qak"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ted8b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5t62y"]
+
+[node name="ItemRichName" type="Button"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+theme_override_styles/focus = SubResource("StyleBoxEmpty_csd6r")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_o32e2")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mm4g4")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_c0qak")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ted8b")
+button_mask = 0
+
+[node name="RichName" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5t62y")
+bbcode_enabled = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1

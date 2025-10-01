@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://nwfjuy18sch6"]
+
+[ext_resource type="Texture2D" uid="uid://isgka4ucmwi4" path="res://addons/script_multi_plus/sme_images/godot_Folder.svg" id="1_1h1sg"]
+[ext_resource type="Script" uid="uid://b20ewqygo428n" path="res://addons/script_multi_plus/smp_scripts/smp_finder_panel_scripts/smp_label_select_folder.gd" id="1_b2cuf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b2cuf"]
+bg_color = Color(0.6, 0.6, 0.6, 0.02)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.8, 0.8, 0.8, 0.3)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[node name="LabelSelectFolder" type="MarginContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_right = 12
+script = ExtResource("1_b2cuf")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_b2cuf")
+
+[node name="H" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="s" type="Control" parent="H"]
+custom_minimum_size = Vector2(4, 0)
+layout_mode = 2
+
+[node name="IconTextureFolder" type="TextureRect" parent="H"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+texture = ExtResource("1_1h1sg")
+stretch_mode = 5
+
+[node name="LabelSelectFolder" type="Label" parent="H"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 0
+text = "ALL"
+text_overrun_behavior = 3
+
+[node name="s2" type="Control" parent="H"]
+custom_minimum_size = Vector2(4, 0)
+layout_mode = 2

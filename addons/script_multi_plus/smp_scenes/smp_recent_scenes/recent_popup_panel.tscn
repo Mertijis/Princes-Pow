@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://bj05dteiu2lum"]
+
+[ext_resource type="Script" uid="uid://bpwo7gexvwwd5" path="res://addons/script_multi_plus/smp_scripts/smp_dock/smp_item_recent/smp_recent_popup_panel.gd" id="1_aa4pp"]
+
+[node name="RecentPopupPanel" type="PopupPanel"]
+auto_translate_mode = 1
+size = Vector2i(8, 8)
+visible = true
+script = ExtResource("1_aa4pp")
+
+[node name="VBox" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 4.0
+offset_bottom = 4.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 6
